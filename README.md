@@ -1,4 +1,6 @@
 # iSiTestProject
+
+To run the project locally, you need to follow the following steps:
 1. git clone https://github.com/libgit2/libgit2
 2. create virtual environment in your local machine with python3.10
 3. run in terminal pip install -r requirenments.txt
