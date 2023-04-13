@@ -1,5 +1,5 @@
 from rest_framework import generics
-from rest_framework.permissions import IsAuthenticated
+from rest_framework.permissions import IsAuthenticated, AllowAny
 from rest_framework.response import Response
 from rest_framework import status
 from Chat.models import Thread, Message
@@ -28,7 +28,7 @@ class CreateThread(generics.CreateAPIView):
 class ListOfTreads(generics.ListAPIView):
     queryset = Thread.objects.all()
     serializer_class = ThreadSerializer
-    permission_classes = (IsAuthenticated,)
+    permission_classes = (AllowAny,)
 
 
 class DestroyThread(generics.DestroyAPIView):
